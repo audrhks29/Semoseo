@@ -4,13 +4,7 @@ import { useBook } from '../contexts/BookContext';
 const Add = memo(() => {
     const { onAdd, inputChange, inputValue } = useBook()
     const { code, genre, title, author } = inputValue
-    // const { onAdd } = useBook()
-    // const onSubmit = (e) => {
-    //     e.preventDefault()
-    //     if (!text.trim()) return
-    //     onAdd(text)
-    //     navigate('/')
-    // }
+
     return (
         <div>
             <form onSubmit={onAdd}>

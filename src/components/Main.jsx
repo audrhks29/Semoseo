@@ -1,7 +1,9 @@
-import React, { memo } from 'react';
+import React, { memo, useEffect } from 'react';
 import { useBook } from '../contexts/BookContext';
+import { useLogin } from '../contexts/LoginContext';
+import { Link, useNavigate } from 'react-router-dom';
 
-const Main = memo(() => {
+const Main = () => {
     const { data, onDel } = useBook()
     return (
         <div className='section'>
@@ -29,7 +31,7 @@ const Main = memo(() => {
                                 <td>{item.title}</td>
                                 <td>{item.author}</td>
                                 <td>
-                                    <button>관리</button>
+                                    <button><Link to={`/edit/${item.id}`}>관리</Link></button>
                                     <button onClick={() => onDel(item.id)}>삭제</button>
                                 </td>
                             </tr>
@@ -40,6 +42,6 @@ const Main = memo(() => {
 
         </div>
     );
-});
+};
 
-export default Main;
+export default memo(Main);
