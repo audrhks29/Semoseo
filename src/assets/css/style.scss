@@ -1,0 +1,152 @@
+$mainColor: saddlebrown;
+$subColor: peru;
+
+#wrap {
+    width: 100%;
+
+    #header {
+        width: 100%;
+        background-color: $mainColor;
+        color: white;
+        text-align: center;
+        font-size: 40px;
+        height: 100px;
+        line-height: 100px;
+    }
+
+    h2 {
+        font-size: 30px;
+        text-align: center;
+        padding: 30px;
+        font-weight: 600;
+    }
+
+    .inner {
+        width: 1400px;
+        margin: auto;
+        // border: 1px solid #000;
+    }
+
+    .nav {
+        width: 100%;
+        background-color: $subColor;
+
+        .inner {
+            display: flex;
+
+            li {
+                text-align: center;
+                width: 200px;
+                height: 40px;
+                line-height: 40px;
+                font-size: 18px;
+
+                &.on {
+                    color: white;
+                    border-bottom: 3px solid black;
+                    box-sizing: border-box;
+                    background-color: $mainColor;
+                }
+
+                &:hover {
+                    background-color: $mainColor;
+                    color: white;
+                }
+
+            }
+        }
+    }
+
+    .section {
+        .bookList {
+            width: 100%;
+
+            tbody {
+                tr {
+                    box-sizing: border-box;
+
+                    th {
+                        border-bottom: 2px solid #000;
+                        padding: 10px 0;
+                        font-size: 18px;
+                        font-weight: 600;
+                        box-sizing: border-box;
+                    }
+
+                    td {
+                        border-bottom: 1px solid #000;
+                        padding: 5px 0;
+                        height: 50px;
+                        font-size: 16px;
+                        line-height: 50px;
+                        box-sizing: border-box;
+
+                        button {
+                            width: 46px;
+                            height: 30px;
+                            border: none;
+                            background-color: transparent;
+                            font-size: 24px;
+                            vertical-align: middle;
+                            cursor: pointer;
+
+                            &:hover {
+                                color: $mainColor;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .editBook,
+        .addBook,
+        .loginContainer {
+            form {
+                position: relative;
+                display: block;
+                margin: auto;
+                width: 410px;
+
+                div {
+                    margin-bottom: 10px;
+
+                    label {
+                        margin-right: 20px;
+                    }
+                }
+
+                .btnWrap {
+                    position: absolute;
+                    right: 0;
+
+                    button {
+                        width: 60px;
+                        height: 32px;
+                        background-color: $subColor;
+                        border: none;
+                        cursor: pointer;
+
+                        &:hover {
+                            background-color: $mainColor;
+                            color: white;
+                        }
+
+                        &:nth-last-child(2) {
+                            margin-right: 5px;
+                        }
+                    }
+                }
+
+                input[type="text"],
+                input[type="password"],
+                input[type="id"] {
+                    width: 400px;
+                    height: 40px;
+                }
+            }
+        }
+    }
+
+
+}

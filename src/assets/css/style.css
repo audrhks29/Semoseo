@@ -1,0 +1,136 @@
+#wrap {
+  width: 100%;
+}
+#wrap #header {
+  width: 100%;
+  background-color: saddlebrown;
+  color: white;
+  text-align: center;
+  font-size: 40px;
+  height: 100px;
+  line-height: 100px;
+}
+#wrap h2 {
+  font-size: 30px;
+  text-align: center;
+  padding: 30px;
+  font-weight: 600;
+}
+#wrap .inner {
+  width: 1400px;
+  margin: auto;
+}
+#wrap .nav {
+  width: 100%;
+  background-color: peru;
+}
+#wrap .nav .inner {
+  display: flex;
+}
+#wrap .nav .inner li {
+  text-align: center;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+}
+#wrap .nav .inner li.on {
+  color: white;
+  border-bottom: 3px solid black;
+  box-sizing: border-box;
+  background-color: saddlebrown;
+}
+#wrap .nav .inner li:hover {
+  background-color: saddlebrown;
+  color: white;
+}
+#wrap .section .bookList {
+  width: 100%;
+}
+#wrap .section .bookList tbody tr {
+  box-sizing: border-box;
+}
+#wrap .section .bookList tbody tr th {
+  border-bottom: 2px solid #000;
+  padding: 10px 0;
+  font-size: 18px;
+  font-weight: 600;
+  box-sizing: border-box;
+}
+#wrap .section .bookList tbody tr td {
+  border-bottom: 1px solid #000;
+  padding: 5px 0;
+  height: 50px;
+  font-size: 16px;
+  line-height: 50px;
+  box-sizing: border-box;
+}
+#wrap .section .bookList tbody tr td button {
+  width: 46px;
+  height: 30px;
+  border: none;
+  background-color: transparent;
+  font-size: 24px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+#wrap .section .bookList tbody tr td button:hover {
+  color: saddlebrown;
+}
+#wrap .section .editBook form,
+#wrap .section .addBook form,
+#wrap .section .loginContainer form {
+  position: relative;
+  display: block;
+  margin: auto;
+  width: 410px;
+}
+#wrap .section .editBook form div,
+#wrap .section .addBook form div,
+#wrap .section .loginContainer form div {
+  margin-bottom: 10px;
+}
+#wrap .section .editBook form div label,
+#wrap .section .addBook form div label,
+#wrap .section .loginContainer form div label {
+  margin-right: 20px;
+}
+#wrap .section .editBook form .btnWrap,
+#wrap .section .addBook form .btnWrap,
+#wrap .section .loginContainer form .btnWrap {
+  position: absolute;
+  right: 0;
+}
+#wrap .section .editBook form .btnWrap button,
+#wrap .section .addBook form .btnWrap button,
+#wrap .section .loginContainer form .btnWrap button {
+  width: 60px;
+  height: 32px;
+  background-color: peru;
+  border: none;
+  cursor: pointer;
+}
+#wrap .section .editBook form .btnWrap button:hover,
+#wrap .section .addBook form .btnWrap button:hover,
+#wrap .section .loginContainer form .btnWrap button:hover {
+  background-color: saddlebrown;
+  color: white;
+}
+#wrap .section .editBook form .btnWrap button:nth-last-child(2),
+#wrap .section .addBook form .btnWrap button:nth-last-child(2),
+#wrap .section .loginContainer form .btnWrap button:nth-last-child(2) {
+  margin-right: 5px;
+}
+#wrap .section .editBook form input[type=text],
+#wrap .section .editBook form input[type=password],
+#wrap .section .editBook form input[type=id],
+#wrap .section .addBook form input[type=text],
+#wrap .section .addBook form input[type=password],
+#wrap .section .addBook form input[type=id],
+#wrap .section .loginContainer form input[type=text],
+#wrap .section .loginContainer form input[type=password],
+#wrap .section .loginContainer form input[type=id] {
+  width: 400px;
+  height: 40px;
+}
+/*# sourceMappingURL=style.css.map */
