@@ -4,13 +4,13 @@ import { inputChange, login } from '../store/modules/signSlice';
 import { useNavigate } from 'react-router-dom';
 const Login = () => {
     const navigate = useNavigate()
-    const { userPwd } = useSelector(state => state.sign)
-    const { userId } = useSelector(state => state.sign)
+    const { userId, userPwd } = useSelector(state => state.sign.users)
+    console.log(userId);
     const dispatch = useDispatch()
     const onSubmit = (e) => {
         e.preventDefault()
         if (!userPwd || !userId) return
-        dispatch(login({ userId, userPwd }))
+        dispatch(login({ userId, userPwd, loginStatus: true }))
         navigate('/')
     }
     return (

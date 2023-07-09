@@ -12,13 +12,16 @@ import Edit from './pages/Edit';
 import './assets/css/reset.css'
 import './assets/css/style.scss'
 
+import { useSelector } from 'react-redux';
+
 const App = () => {
+  const { loginStatus } = useSelector(state => state.sign)
   return (
     <div id='wrap'>
       <HashRouter>
         <Header />
         <Routes>
-          <Route path='/' element={<Main />} />
+          <Route path='/' element={loginStatus ? <Main /> : <Login />} />
           <Route path='/add' element={<Add />} />
           <Route path='/login' element={<Login />} />
           <Route path='/logout' element={<Logout />} />

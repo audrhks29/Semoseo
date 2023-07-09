@@ -44,6 +44,14 @@
   background-color: saddlebrown;
   color: white;
 }
+#wrap .nav .inner span {
+  display: block;
+  margin-left: auto;
+  line-height: 40px;
+}
+#wrap .nav .inner span em {
+  font-weight: 600;
+}
 #wrap .section .bookList {
   width: 100%;
 }
@@ -130,6 +138,36 @@
 #wrap .section .loginContainer form input[type=text],
 #wrap .section .loginContainer form input[type=password],
 #wrap .section .loginContainer form input[type=id] {
+  width: 400px;
+  height: 40px;
+}
+#wrap .section .logoutContainer .logoutWarp {
+  position: relative;
+  display: block;
+  margin: auto;
+  width: 410px;
+}
+#wrap .section .logoutContainer .logoutWarp .btnWrap {
+  position: absolute;
+  right: 0;
+}
+#wrap .section .logoutContainer .logoutWarp .btnWrap button {
+  width: 70px;
+  height: 32px;
+  background-color: peru;
+  border: none;
+  cursor: pointer;
+}
+#wrap .section .logoutContainer .logoutWarp .btnWrap button:hover {
+  background-color: saddlebrown;
+  color: white;
+}
+#wrap .section .logoutContainer .logoutWarp .btnWrap button:nth-last-child(2) {
+  margin-right: 5px;
+}
+#wrap .section .logoutContainer input[type=text],
+#wrap .section .logoutContainer input[type=password],
+#wrap .section .logoutContainer input[type=id] {
   width: 400px;
   height: 40px;
 }

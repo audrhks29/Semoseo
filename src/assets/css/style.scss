@@ -52,7 +52,16 @@ $subColor: peru;
                     background-color: $mainColor;
                     color: white;
                 }
+            }
 
+            span {
+                display: block;
+                margin-left: auto;
+                line-height: 40px;
+
+                em {
+                    font-weight: 600;
+                }
             }
         }
     }
@@ -146,7 +155,45 @@ $subColor: peru;
                 }
             }
         }
+
+        .logoutContainer {
+            .logoutWarp {
+                position: relative;
+                display: block;
+                margin: auto;
+                width: 410px;
+
+                .btnWrap {
+                    position: absolute;
+                    right: 0;
+
+                    button {
+                        width: 70px;
+                        height: 32px;
+                        background-color: $subColor;
+                        border: none;
+                        cursor: pointer;
+
+                        &:hover {
+                            background-color: $mainColor;
+                            color: white;
+                        }
+
+                        &:nth-last-child(2) {
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+
+
+
+            input[type="text"],
+            input[type="password"],
+            input[type="id"] {
+                width: 400px;
+                height: 40px;
+            }
+        }
     }
-
-
 }

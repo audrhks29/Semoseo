@@ -1,10 +1,11 @@
 import React, { memo } from 'react';
 import BookList from '../components/BookList';
+import { useSelector } from 'react-redux';
 
 const Main = () => {
 
     return (
-        <div className='section'>
+        <div div className='section' >
             <div className="inner">
                 <h2>도서 목록</h2>
                 <BookList />
