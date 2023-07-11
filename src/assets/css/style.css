@@ -171,4 +171,16 @@
   width: 400px;
   height: 40px;
 }
+#wrap .section .pagination {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+#wrap .section .pagination p {
+  cursor: pointer;
+  padding: 0 10px;
+}
+#wrap .section .pagination p.pagingOn {
+  background: peru;
+}
 /*# sourceMappingURL=style.css.map */
