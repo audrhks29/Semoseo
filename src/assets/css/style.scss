@@ -1,5 +1,5 @@
-$mainColor: saddlebrown;
-$subColor: peru;
+$mainColor: #2E2E2E;
+$subColor: #B18904;
 
 #wrap {
     width: 100%;
@@ -157,11 +157,13 @@ $subColor: peru;
         }
 
         .logoutContainer {
-            .logoutWarp {
+
+            .logoutWrap {
                 position: relative;
                 display: block;
                 margin: auto;
                 width: 410px;
+
 
                 .btnWrap {
                     position: absolute;

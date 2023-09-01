@@ -3,7 +3,7 @@
 }
 #wrap #header {
   width: 100%;
-  background-color: saddlebrown;
+  background-color: #2E2E2E;
   color: white;
   text-align: center;
   font-size: 40px;
@@ -22,7 +22,7 @@
 }
 #wrap .nav {
   width: 100%;
-  background-color: peru;
+  background-color: #B18904;
 }
 #wrap .nav .inner {
   display: flex;
@@ -38,10 +38,10 @@
   color: white;
   border-bottom: 3px solid black;
   box-sizing: border-box;
-  background-color: saddlebrown;
+  background-color: #2E2E2E;
 }
 #wrap .nav .inner li:hover {
-  background-color: saddlebrown;
+  background-color: #2E2E2E;
   color: white;
 }
 #wrap .nav .inner span {
@@ -83,7 +83,7 @@
   cursor: pointer;
 }
 #wrap .section .bookList tbody tr td button:hover {
-  color: saddlebrown;
+  color: #2E2E2E;
 }
 #wrap .section .editBook form,
 #wrap .section .addBook form,
@@ -114,14 +114,14 @@
 #wrap .section .loginContainer form .btnWrap button {
   width: 60px;
   height: 32px;
-  background-color: peru;
+  background-color: #B18904;
   border: none;
   cursor: pointer;
 }
 #wrap .section .editBook form .btnWrap button:hover,
 #wrap .section .addBook form .btnWrap button:hover,
 #wrap .section .loginContainer form .btnWrap button:hover {
-  background-color: saddlebrown;
+  background-color: #2E2E2E;
   color: white;
 }
 #wrap .section .editBook form .btnWrap button:nth-last-child(2),
@@ -141,28 +141,28 @@
   width: 400px;
   height: 40px;
 }
-#wrap .section .logoutContainer .logoutWarp {
+#wrap .section .logoutContainer .logoutWrap {
   position: relative;
   display: block;
   margin: auto;
   width: 410px;
 }
-#wrap .section .logoutContainer .logoutWarp .btnWrap {
+#wrap .section .logoutContainer .logoutWrap .btnWrap {
   position: absolute;
   right: 0;
 }
-#wrap .section .logoutContainer .logoutWarp .btnWrap button {
+#wrap .section .logoutContainer .logoutWrap .btnWrap button {
   width: 70px;
   height: 32px;
-  background-color: peru;
+  background-color: #B18904;
   border: none;
   cursor: pointer;
 }
-#wrap .section .logoutContainer .logoutWarp .btnWrap button:hover {
-  background-color: saddlebrown;
+#wrap .section .logoutContainer .logoutWrap .btnWrap button:hover {
+  background-color: #2E2E2E;
   color: white;
 }
-#wrap .section .logoutContainer .logoutWarp .btnWrap button:nth-last-child(2) {
+#wrap .section .logoutContainer .logoutWrap .btnWrap button:nth-last-child(2) {
   margin-right: 5px;
 }
 #wrap .section .logoutContainer input[type=text],
@@ -181,6 +181,6 @@
   padding: 0 10px;
 }
 #wrap .section .pagination p.pagingOn {
-  background: peru;
+  background: #B18904;
 }
 /*# sourceMappingURL=style.css.map */

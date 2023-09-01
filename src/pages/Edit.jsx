@@ -6,7 +6,6 @@ import { onEdit } from '../store/modules/bookSlice';
 const Edit = () => {
     const { bookData } = useSelector(state => state.book);
     const navigate = useNavigate()
-    // const { data, onEdit } = useBook()
     const { editID } = useParams()
     const dispatch = useDispatch()
     const [current, setCurrent] = useState({ id: '', code: '', genre: '', title: '', author: '' })

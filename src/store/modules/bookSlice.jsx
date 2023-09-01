@@ -1,10 +1,11 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import axios from 'axios'
 const initialState = {
-    text: "",
+    searchKeyword: "",
     bookData: localStorage.getItem('bookData')
         ? JSON.parse(localStorage.getItem('bookData'))
         : [],
+    searchedData: [],
     loading: true,
     state: null
 }
@@ -42,6 +43,14 @@ export const bookSlice = createSlice({
             state.bookData[index] = { id, code, genre, title, author, };
             localStorage.setItem('bookData', JSON.stringify(state.bookData))
         },
+        onSearchData(state, action) {
+            state.searchKeyword = action.payload
+            console.log(action.payload);
+        },
+        onSearchedData(state, action) {
+            state.searchedData = action.payload
+            console.log(action.payload);
+        }
     },
     extraReducers: (builder) => {
         builder
@@ -61,5 +70,5 @@ export const bookSlice = createSlice({
     }
 })
 
-export const { onAdd, onDel, onEdit } = bookSlice.actions
+export const { onAdd, onDel, onEdit, onSearchData, onSearchedData } = bookSlice.actions
 export default bookSlice.reducer

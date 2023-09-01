@@ -12,7 +12,7 @@ export const Logout = () => {
             <div className='logoutContainer'>
                 <div className="inner">
                     <h2>로그아웃</h2>
-                    <div className='logoutWarp'>
+                    <div className='logoutWrap'>
                         <h3>아이디 : {userId} </h3>
                         <div className='btnWrap'>
                             <button onClick={() => dispatch(logout({ userId: "", userPwd: "", loginStatus: false }), navigate('/'))}>로그아웃</button>

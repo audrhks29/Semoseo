@@ -6,18 +6,20 @@ import { AiFillDelete, AiFillEdit } from 'react-icons/ai';
 import Pagination from './Pagination';
 
 const BookList = () => {
-    const { bookData, loading } = useSelector(state => state.book);
+    const { bookData, loading, searchedData } = useSelector(state => state.book);
     const dispatch = useDispatch()
     const [data, setData] = useState(null)
     useEffect(() => {
-        if (loading && localStorage.getItem('bookData') == null) dispatch(getBookData())
+        if (loading && localStorage.getItem('bookData') == null) {
+            dispatch(getBookData())
+        }
         else {
             JSON.parse(localStorage.getItem('bookData'));
         }
-    }, []);
-    const getPaginationSliceData = (PaginationSliceData) => {
-        setData(PaginationSliceData)
-    }
+    }, [bookData]);
+    useEffect(() => {
+        setData(searchedData)
+    }, [searchedData, bookData])
     return (
         <>
             <table className='bookList' style={{ textAlign: "center" }}>
@@ -52,7 +54,7 @@ const BookList = () => {
                     }
                 </tbody>
             </table>
-            <Pagination bookData={bookData} getPaginationSliceData={getPaginationSliceData} />
+            <Pagination />
         </>
     );
 };
