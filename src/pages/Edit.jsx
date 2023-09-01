@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { onEdit } from '../store/modules/bookSlice';
+import { BtnWrap, CommonFormContainer } from '../styled/CommonStyle';
+import { SectionContainer } from '../styled/MainStyle';
 
 const Edit = () => {
     const { bookData } = useSelector(state => state.book);
@@ -28,8 +30,8 @@ const Edit = () => {
         navigate('/')
     }
     return (
-        <div className="section">
-            <div className='editBook'>
+        <SectionContainer>
+            <CommonFormContainer>
                 <div className="inner">
                     <h2>정보 수정</h2>
                     <form onSubmit={onSubmit}>
@@ -49,14 +51,14 @@ const Edit = () => {
                             <label htmlFor="">저자</label>
                             <input type="text" value={author} name="author" onChange={changeInput} />
                         </div>
-                        <div className='btnWrap'>
+                        <BtnWrap>
                             <button type='submit'>확인</button>
                             <Link to={'/'}><button>취소</button></Link>
-                        </div>
+                        </BtnWrap>
                     </form>
                 </div>
-            </div>
-        </div>
+            </CommonFormContainer>
+        </SectionContainer>
     );
 };
 

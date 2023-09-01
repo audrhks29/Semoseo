@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { inputChange, login } from '../store/modules/signSlice';
 import { useNavigate } from 'react-router-dom';
+import { SectionContainer } from '../styled/MainStyle';
+import { BtnWrap, CommonFormContainer } from '../styled/CommonStyle';
 const Login = () => {
     const navigate = useNavigate()
     const { userId, userPwd } = useSelector(state => state.sign.users)
@@ -14,8 +16,8 @@ const Login = () => {
         navigate('/')
     }
     return (
-        <div className="section">
-            <div className='loginContainer'>
+        <SectionContainer>
+            <CommonFormContainer>
                 <div className="inner">
                     <h2>세상의 모든 서재</h2>
                     <form action="" onSubmit={onSubmit}>
@@ -25,13 +27,13 @@ const Login = () => {
                         </div>
                         <div> <label htmlFor="">비밀번호</label>
                             <input type="password" value={userPwd} onChange={(e) => dispatch(inputChange({ userId, userPwd: e.target.value }))} /></div>
-                        <div className="btnWrap">
+                        <BtnWrap>
                             <button type='submit'>로그인</button>
-                        </div>
+                        </BtnWrap>
                     </form>
                 </div>
-            </div>
-        </div>
+            </CommonFormContainer>
+        </SectionContainer>
     );
 };
 

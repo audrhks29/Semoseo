@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { onSearchData } from '../store/modules/bookSlice';
+import { SearchContainer } from '../styled/SearchStyle';
 
 const SearchBook = () => {
     const [searchData, setSearchData] = useState('');
@@ -13,16 +14,17 @@ const SearchBook = () => {
         dispatch(onSearchData(searchData))
     }
     return (
-        <div>
+        <SearchContainer>
             <form onSubmit={e => onClickSubmit(e)}>
                 <input
                     type="text"
                     value={searchData}
                     onChange={e => onSubmitKeyword(e)}
+                    placeholder='책 제목을 입력해주세요'
                 />
                 <button type="submit">검색</button>
             </form>
-        </div>
+        </SearchContainer>
     );
 };
 

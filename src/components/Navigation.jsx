@@ -1,6 +1,7 @@
 import React, { memo, useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Link, useLocation, useParams } from 'react-router-dom';
+import { NavContainer } from '../styled/NavigationStyle';
 const Navigation = () => {
     const { userId } = useSelector(state => state.sign.users)
     const location = useLocation();
@@ -8,7 +9,7 @@ const Navigation = () => {
 
     const { loginStatus } = useSelector(state => state.sign)
     return (
-        <ul className='nav'>
+        <NavContainer>
             <div className='inner'>
                 <Link to={'/'}><li className={location.pathname === ('/' || '/edit') ? 'on' : ""}>홈</li></Link>
                 <Link to={'/add'}><li className={location.pathname === '/add' ? 'on' : ""}>추가</li></Link>
@@ -21,7 +22,7 @@ const Navigation = () => {
                     loginStatus ? <span><em>{userId}</em>님 환영합니다</span> : ''
                 }
             </div>
-        </ul >
+        </NavContainer >
     );
 };
 

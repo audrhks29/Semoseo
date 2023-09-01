@@ -2,6 +2,8 @@ import React, { memo, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { onAdd } from '../store/modules/bookSlice';
 import { Link, useNavigate } from 'react-router-dom';
+import { SectionContainer } from '../styled/MainStyle';
+import { BtnWrap, CommonFormContainer } from '../styled/CommonStyle';
 
 const Add = memo(() => {
     const navigate = useNavigate()
@@ -19,8 +21,8 @@ const Add = memo(() => {
         navigate('/')
     }
     return (
-        <div className='section'>
-            <div className='addBook'>
+        <SectionContainer>
+            <CommonFormContainer>
                 <div className="inner">
                     <h2>도서 추가</h2>
                     <form onSubmit={onSubmit}>
@@ -40,14 +42,14 @@ const Add = memo(() => {
                             <label htmlFor="">저자</label>
                             <input type="text" value={author} onChange={(e) => setAuthor(e.target.value)} placeholder='저자' />
                         </div>
-                        <div className='btnWrap'>
+                        <BtnWrap>
                             <button type="submit">추가</button>
                             <Link to={'/'}><button>취소</button></Link>
-                        </div>
+                        </BtnWrap>
                     </form>
                 </div>
-            </div>
-        </div>
+            </CommonFormContainer>
+        </SectionContainer>
     );
 });
 

@@ -4,6 +4,7 @@ import { getBookData, onDel } from '../store/modules/bookSlice';
 import { Link } from 'react-router-dom';
 import { AiFillDelete, AiFillEdit } from 'react-icons/ai';
 import Pagination from './Pagination';
+import { BookListTable } from '../styled/MainStyle';
 
 const BookList = () => {
     const { bookData, loading, searchedData } = useSelector(state => state.book);
@@ -22,7 +23,7 @@ const BookList = () => {
     }, [searchedData, bookData])
     return (
         <>
-            <table className='bookList' style={{ textAlign: "center" }}>
+            <BookListTable style={{ textAlign: "center" }}>
                 <colgroup>
                     <col width={200} />
                     <col width={150} />
@@ -53,7 +54,7 @@ const BookList = () => {
                         ))
                     }
                 </tbody>
-            </table>
+            </BookListTable>
             <Pagination />
         </>
     );

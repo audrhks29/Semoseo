@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { TfiAngleDoubleLeft, TfiAngleDoubleRight, TfiAngleLeft, TfiAngleRight } from "react-icons/tfi";
 import { useDispatch, useSelector } from 'react-redux';
 import { onSearchedData } from '../store/modules/bookSlice';
+import { PaginationContainer } from '../styled/PaginationStyle';
 const Pagination = () => {
     const { bookData, searchKeyword, searchedData } = useSelector(state => state.book);
     const bookPerPage = 5
@@ -35,7 +36,7 @@ const Pagination = () => {
         onSlicedBookData()
     }, [currentPage, bookData, searchKeyword])
     return (
-        <div className='pagination'>
+        <PaginationContainer>
             <p onClick={() => goToSelectedPage(1)}><TfiAngleDoubleLeft /></p>
             <p onClick={() => goToSelectedPage(currentPage - 1)}><TfiAngleLeft /></p>
             {
@@ -47,7 +48,7 @@ const Pagination = () => {
             }
             <p onClick={() => goToSelectedPage(currentPage + 1)}><TfiAngleRight /></p>
             <p onClick={() => goToSelectedPage(lastPage)}><TfiAngleDoubleRight /></p>
-        </div >
+        </PaginationContainer >
 
     );
 };
